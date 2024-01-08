@@ -24,7 +24,12 @@ for player, words in player_to_words.items():
     player_points += score_word(word)
   player_to_points[player] = player_points
 
-print(player_to_points)
+
+def play_word(player, word):
+  player_to_words[player].append(word)
+
+play_word("Player 1", "BROWN")
+print(player_to_words)
 
 
 
