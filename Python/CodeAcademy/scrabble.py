@@ -14,3 +14,5 @@ def score_word(word):
   return point_total
 
 print(score_word("BROWNIE"))
+
+player_to_word = {"Player 1": ["BLUE", "TENNIS", "EXIT"], "Lexi Con": ["ERASER", "BELLY", "HUSKY"], "Prof Reader": ["ZAP", "COMA", "PERIOD"]}
