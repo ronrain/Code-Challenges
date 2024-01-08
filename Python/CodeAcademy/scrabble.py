@@ -18,15 +18,18 @@ def score_word(word):
 player_to_words = {"Player 1": ["BLUE", "TENNIS", "EXIT"], "Word Nerd": ["EARTH", "EYES", "MACHINE"], "Lexi Con": ["ERASER", "BELLY", "HUSKY"], "Prof Reader": ["ZAP", "COMA", "PERIOD"]}
 
 player_to_points = {}
-for player, words in player_to_words.items():
-  player_points = 0
-  for word in words:
-    player_points += score_word(word)
-  player_to_points[player] = player_points
+def update_points_totals():
+  for player, words in player_to_words.items():
+    player_points = 0
+    for word in words:
+      player_points += score_word(word)
+    player_to_points[player] = player_points
+update_points_totals()
 
 
 def play_word(player, word):
   player_to_words[player].append(word)
+  update_points_totals()
 
 play_word("Player 1", "BROWN")
 print(player_to_words)
